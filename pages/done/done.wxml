@@ -1,0 +1,25 @@
+<view class="container">
+
+
+
+
+
+
+    <mp-cell value="从 {{start}} 到 {{stop}}" class="ext-class"></mp-cell>
+    <mp-cell value="{{planname}} {{planall}} {{measure}}" class="ext-class"></mp-cell>
+    <mp-cell value="已完成" class="ext-class"></mp-cell>
+    <label>
+        <input bindinput="doneNew"   type="number" class="weui-input"  placeholder="{{plandone}}" value='{{plandonenew}}' />
+    </label>
+    <mp-cell value=" {{measure}}" class="ext-class"></mp-cell>
+    <view class="page__bd">
+        <view class="weui-btn-area"  >
+            <button class="weui-btn" type="primary" bindtap="donePlan">记录</button></view></view>
+
+
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__text" bindtap="Fu">联系开发者</view>
+        <view class="weui-footer__text">Copyright © 2021-2022 fushisanlang.cn</view>
+    </view>
+
+</view>

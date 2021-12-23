@@ -1,0 +1,51 @@
+<view class="page" data-weui-theme="{{theme}}">
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+  
+    <mp-form-page title="调整计划  {{plannameOld}}"  >
+      <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+
+
+          <label>
+            <mp-cell prop="date" title="从" ext-class="">
+              <picker data-field="date" mode="date" value="{{date}}" start="1900-09-01" end="2999-09-01" bindchange="bindDateChange">
+                <view class="weui-input">{{date}}</view>
+              </picker>
+            </mp-cell>
+          </label>
+
+
+          <label>
+            <mp-cell prop="date2" title="到" ext-class="" style="width: 30%;">
+              <picker data-field="date" mode="date" value="{{date2}}" start="1900-09-01" end="2999-09-01" bindchange="bindDateChangeStop">
+                <view class="weui-input">{{date2}}</view>
+              </picker>
+            </mp-cell>
+          </label>
+
+
+                <label>
+                    <mp-cell prop="name" title="一共" ext-class="">
+                      <input bindinput="planall"   type="number" class="weui-input" placeholder="{{planallOld}}" value='{{planall}}'   />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="name" title="❤️" ext-class="">
+                        <input bindinput="measure"   class="weui-input" placeholder="{{measureOld}}" value='{{measure}}'  />
+                    </mp-cell>
+                </label>
+        </mp-cells>
+      </mp-form>
+ 
+
+ 
+<view> <mp-cell></mp-cell></view>
+      <view class="weui-form__opr-area" >
+        <button bindtap="doChangePlan"  class="doLogin" type="primary">确定</button>
+      </view>
+  </mp-form-page>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text" bindtap="Fu">联系开发者</view>
+    <view class="weui-footer__text">Copyright © 2021-2022 fushisanlang.cn</view>
+</view>
+</view>

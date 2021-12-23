@@ -1,0 +1,25 @@
+
+ <view class="container">
+    <view class="svg-demo-container" bindtap="Add">
+     
+     <text class="icon-open-new icon"></text>
+     <text class="svg-demo-text">新建</text>   
+ </view>
+ 
+
+
+ <block wx:for="{{arr}}" wx:key="id">
+ 
+   
+   <mp-cell value="{{item.PlanName}}" data-PlanName="{{item.PlanName}}" data-Measure="{{item.Measure}}" data-PlanAll="{{item.PlanAll}}" data-PlanDone="{{item.PlanDone}}" data-Start="{{item.Start}}" data-Stop="{{item.Stop}}"  class="ext-class" bindtap="Info" ></mp-cell>
+ </block>
+ <view class="weui-footer weui-footer_fixed-bottom">
+           
+           <view class="weui-footer__text" bindtap="Fu">联系开发者</view>
+           <view class="weui-footer__text" >Copyright © 2021-2022 fushisanlang.cn</view>
+       </view>
+   
+ </view>
+
+   
+    
